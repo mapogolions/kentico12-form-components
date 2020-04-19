@@ -23,8 +23,8 @@ namespace MedioClinic.Models.FormComponents.PageTypeSelection
         protected override IEnumerable<SelectListItem> GetItems()
         {
             var asm = typeof(PageTypesLocationAttribute).Assembly;
-            var pageTypes = asm.DefinedTypes.Where(it => typeof(TreeNode).IsAssignableFrom(it)).ToList();
-            return pageTypes?.Select(it => new SelectListItem
+            var pageTypes = asm.DefinedTypes.Where(it => typeof(TreeNode).IsAssignableFrom(it));
+            return pageTypes.Select(it => new SelectListItem
             {
                 Text = it.Name,
                 Value = $"{SiteContext.CurrentSiteName}.{it.Name}"
