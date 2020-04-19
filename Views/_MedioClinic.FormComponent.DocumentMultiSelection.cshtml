@@ -1,0 +1,9 @@
+﻿@model MedioClinic.Models.FormComponents.DocumentMultiSelection.DocumentMultiSelectionComponent
+
+@{
+    var htmlAttributes = ViewData.GetEditorHtmlAttributes();
+    htmlAttributes.Add("multiple", "multiple");
+}
+
+
+@Html.ListBoxFor(x => x.SelectedItems, Model.Items(), htmlAttributes) 
