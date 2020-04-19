@@ -1,0 +1,9 @@
+﻿@model MedioClinic.Models.FormComponents.MultiSelection.MultiSelectionComponent
+
+@{
+    var htmlAttributes = ViewData.GetEditorHtmlAttributes();
+    htmlAttributes.Add("multiple", "multiple");
+}
+
+
+@Html.DropDownListFor(x => x.SelectedItems, Model.Items(), htmlAttributes) 
