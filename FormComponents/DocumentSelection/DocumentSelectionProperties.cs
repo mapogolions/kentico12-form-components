@@ -1,9 +1,9 @@
 ﻿using Kentico.Forms.Web.Mvc;
 using MedioClinic.Models.FormComponents.PageTypeSelection;
 
-namespace MedioClinic.Models.FormComponents.DocumentMultiSelection
+namespace MedioClinic.Models.FormComponents.DocumentSelection
 {
-    public class DocumentMultiSelectionProperties : SelectorProperties
+    public class DocumentSelectionProperties : SelectorProperties
     {
         [EditingComponent(PageTypeSelectionComponent.Identifier)]
         public string PageTypeName { get; set; }
