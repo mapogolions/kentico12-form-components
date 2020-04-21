@@ -1,0 +1,18 @@
+﻿@model MedioClinic.Models.Widgets.BasketballTeamWidget.BasketballTeamWidgetViewModel
+
+<h3>@(Model?.Name)</h3>
+
+@if (!string.IsNullOrEmpty(Model?.Coach?.FullName))
+{
+    <strong>Head coach: @Model.Coach.FullName</strong>
+}
+
+@if (Model?.Roster != null)
+{
+    <ul>
+        @foreach (var player in Model.Roster)
+        {
+            <li>@player.FullName | @player.Age | @player.Position</li>
+        }
+    </ul>
+}
